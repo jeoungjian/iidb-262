@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>플렉스박스 실습</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- **GNB (글로벌 네비게이션):** 좌측 로고, 우측 로그인 버튼 그룹 양끝 정렬 -->
+    <div class="box">
+      <h3 class="title">1. 글로벌 네비게이션</h3>
+      <nav class="nav">
+        <img src="" alt="로고" class="logo" />
+        <ul class="nav-menus">
+          <li class="nav-menu">오늘의뮤지컬플리</li>
+          <li class="nav-menu">드라큘라</li>
+          <li class="nav-menu">위키드</li>
+          <li class="nav-menu">몬테크리스토</li>
+        </ul>
+        <button class="btn">로그인</button>
+      </nav>
+    </div>
+
+    <!-- **검색바 (Search Bar):** 가변 너비의 입력창과 고정 너비의 검색 아이콘을 한 줄에 꽉 차게 배치 -->
+    <div class="box">
+      <h3 class="title">2. 검색바</h3>
+      <div class="search">
+        <input type="text" class="input" placeholder="검색어를 입력하세요" />
+        <button class="btn">검색</button>
+      </div>
+    </div>
+
+    <!-- **미디어/프로필 객체:** 좌측 원형 썸네일과 우측 텍스트 정보의 수직 중앙정렬 -->
+    <div class="box">
+      <h3 class="title">3. 미디어/프로필 객체</h3>
+      <div class="profile">
+        <img src="" alt="프로필" class="user-img" />
+        <div class="user-info">
+          <h4 class="name">잉어연적</h4>
+          <p class="info">잉플루언서</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- **카드 내 액션 버튼 하단 고정:** 카드 본문 길이에 관계없이 '자세히보기' 버튼은 카드 최하단에 항상 위치 -->
+    <div class="box">
+      <h3 class="title">4.카드 내 액션 버튼 하단 고정</h3>
+      <div class="action-button">
+        <p class="text">
+          무슨말을 써야 할지는 모르겠지만 아무래도 이걸 써야지만 제대로
+          작동했는지 알 수 있는거겠죠? 저는 이번주도 열심히 과제를 하고
+          있습니다...근데 과제만 열심히 하느라 일본어 시험은 뒷전으로 가있네요
+          그래도 그게 옳은 우선순위라고 생각합니다. 회화 수업이었으면 마음이
+          편했을건데 그걸 과거의 제가 멋대로 다 들어버렸네요 어리석은
+          2학년이었습니다...
+        </p>
+        <button class="btn">자세히 보기</button>
+      </div>
+    </div>
+
+    <!-- **해시태그 / 필터 칩(Chip):** 여러개의 태그가 한 줄로 나열되다 부모 너비를 초과하면 다음 줄로 자동 줄바꿈 -->
+    <div class="box">
+      <h3 class="title">5. 해시태그/필터 칩</h3>
+      <div class="hashtag">
+        <ul class="tags">
+          <li class="tag">
+            <span>#끝말잇기 시작</span>
+          </li>
+          <li class="tag">
+            <span>#행복하세요</span>
+          </li>
+          <li class="tag">
+            <span>#요거트찹살떡</span>
+          </li>
+          <li class="tag">
+            <span>#떡갈비</span>
+          </li>
+          <li class="tag">
+            <span>#비염</span>
+          </li>
+          <li class="tag">
+            <span>#염염염...</span>
+          </li>
+          <li class="tag">
+            <span>#끝말잇기 끝</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- **동등 비율 탭(Tab) 메뉴:** 너비와 상관없이 3개의 탭 메뉴가 1:1:1의 동일 비율로 배분 -->
+    <div class="box">
+      <h3 class="title">6. 동등 비율 탭 메뉴</h3>
+      <div class="taps">
+        <div class="tap">
+          <h3 class="t-title">1. 딱히 쓸게 있는건 아님</h3>
+          <p class="t-text">근데 그냥 아무거나 씀</p>
+        </div>
+        <div class="tap">
+          <h3 class="t-title">2. 코딩을 하면서 느끼는 건데</h3>
+          <p class="t-text">
+            너무 어려워서 하기 싫긴 한데, 그래도 뭔가 이 어려운걸 내가 한다?
+            심지어 내가 좀 막 코드라는걸 내 머리속에서 생각한다? 이건 좀 멋진 것
+            같습니다
+          </p>
+        </div>
+        <div class="tap">
+          <h3 class="t-title">3. 그래서 열심히 하려고요</h3>
+          <p class="t-text">
+            아마 이 글은 변경되겠죠...안한다면 그냥 밤샘하느라 이런 것에 신경 쓸
+            시간이 없던 거랍니다...봐주세요...지금도 너무 졸리네요...그래도 미리
+            해놔야지 전 날에 밤을 안새죠...
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- **모바일 하단 툴바:** 앱 하단에 4개의 아이콘이 동일한 여백간격을 두고 고르게 배치 -->
+    <div class="box">
+      <h3 class="title">7. 모바일 하단 툴바</h3>
+      <nav class="toolbar">
+        <ul class="tb-menus">
+          <li class="tb-menu">
+            <img src="" alt="홈" />
+          </li>
+          <li class="tb-menu">
+            <img src="" alt="카테고리" />
+          </li>
+          <li class="tb-menu">
+            <img src="" alt="발견" />
+          </li>
+          <li class="tb-menu">
+            <img src="" alt="매장위치" />
+          </li>
+          <li class="tb-menu">
+            <img src="" alt="좋아요" />
+          </li>
+          <li class="tb-menu">
+            <img src="" alt="마이" />
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

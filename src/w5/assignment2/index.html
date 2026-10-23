@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그리드 실습</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- **커머스 상품 리스트 (Auto-fit):** 카드의 최소 너비 제한을 두고, 화면 넓이에 따라 열의 개수가 자동으로 반응하는 갤러리 뷰 -->
+    <div class="box">
+      <h3 class="title">8. 커머스 상품 리스트</h3>
+      <div class="product-list-auto">
+        <div class="product-box">
+          <img src="" alt="상품1" class="product-img" />
+          <div class="product-info">
+            <h4 class="product-title">어디로든 문</h4>
+            <p class="product-price">9,999,999원</p>
+          </div>
+        </div>
+        <div class="product-box">
+          <img src="" alt="상품2" class="product-img" />
+          <div class="product-info">
+            <h4 class="product-title">대나무 헬리콥터</h4>
+            <p class="product-price">1,250,000원</p>
+          </div>
+        </div>
+        <div class="product-box">
+          <img src="" alt="상품3" class="product-img" />
+          <div class="product-info">
+            <h4 class="product-title">암기빵</h4>
+            <p class="product-price">8,540,000원</p>
+          </div>
+        </div>
+        <div class="product-box">
+          <img src="" alt="상품4" class="product-img" />
+          <div class="product-info">
+            <h4 class="product-title">타임 보자기</h4>
+            <p class="product-price">9,999,999원</p>
+          </div>
+        </div>
+        <div class="product-box">
+          <img src="" alt="상품5" class="product-img" />
+          <div class="product-info">
+            <h4 class="product-title">만약에 박스</h4>
+            <p class="product-price">10,000,000원</p>
+          </div>
+        </div>
+        <div class="product-box">
+          <img src="" alt="상품6" class="product-img" />
+          <div class="product-info">
+            <h4 class="product-title">살인 청부업자</h4>
+            <p class="product-price">5,850,000원</p>
+          </div>
+        </div>
+        <div class="product-box">
+          <img src="" alt="상품7" class="product-img" />
+          <div class="product-info">
+            <h4 class="product-title">빅라이트</h4>
+            <p class="product-price">3,250,000원</p>
+          </div>
+        </div>
+        <div class="product-box">
+          <img src="" alt="상품8" class="product-img" />
+          <div class="product-info">
+            <h4 class="product-title">저주의 사진기</h4>
+            <p class="product-price">1,000,000원</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- **대시보드 / 벤토박스:** 다수의 위젯 중 특정 위젯 1개만 가로/세로 2칸(2x2)을 병합하여 차지하는 구조 -->
+    <div class="box">
+      <h3 class="title">9. 대시보드 / 벤토박스</h3>
+      <div class="bento">
+        <div class="bento-box box1">병합위젯(2x2)</div>
+        <div class="bento-box box2">기본위젯1</div>
+        <div class="bento-box box3">기본위젯2</div>
+        <div class="bento-box box4">기본위젯3</div>
+        <div class="bento-box box5">기본위젯4</div>
+      </div>
+    </div>
+
+    <!-- **복잡한 결제 폼:** 첫 줄 2칸, 둘째 줄 1칸, 셋째 줄 3칸으로 분할된 정교한 회원가입 폼 레이아웃 -->
+    <div class="box">
+      <h3 class="title">10. 복잡한 결제 폼</h3>
+      <form class="signform">
+        <div class="input top">
+          <label>성</label>
+          <input type="text" />
+        </div>
+        <div class="input top">
+          <label>이름</label>
+          <input type="text" />
+        </div>
+        <div class="input middle">
+          <label>주소</label>
+          <input type="text" />
+        </div>
+        <div class="input bottom">
+          <label>성별</label>
+          <input type="text" />
+        </div>
+        <div class="input bottom">
+          <label>생년월일</label>
+          <input type="text" />
+        </div>
+        <div class="input bottom">
+          <label>기타</label>
+          <input type="text" />
+        </div>
+      </form>
+    </div>
+
+    <!-- **월간 달력 (Calendar):** 7개의 열(Column)을 지정하여 자동으로 날짜가 7칸 격자에 맞추어 떨어지는 레이아웃 -->
+    <div class="box">
+      <h3 class="title">11. 월간 달력</h3>
+      <div class="calendar_grid">
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day">8</div>
+        <div class="day">9</div>
+        <div class="day">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day">13</div>
+        <div class="day">14</div>
+        <div class="day">15</div>
+        <div class="day">16</div>
+        <div class="day">17</div>
+        <div class="day">18</div>
+        <div class="day">19</div>
+        <div class="day">20</div>
+        <div class="day">21</div>
+        <div class="day">22</div>
+        <div class="day">23</div>
+        <div class="day">24</div>
+        <div class="day">25</div>
+        <div class="day">26</div>
+        <div class="day">27</div>
+        <div class="day">28</div>
+        <div class="day">29</div>
+        <div class="day">30</div>
+        <div class="day">31</div>
+      </div>
+    </div>
+
+    <!-- **스펙 비교 표 (Pricing Table):** `<table>` 태그 없이 Grid를 사용하여 각 행과 열의 크기가 일관되게 정렬된 요금표 -->
+    <div class="box">
+      <h3 class="title">12. 스펙 비교 표</h3>
+      <div class="pricing-table">
+        <div class="table">
+          <h4 class="class">class</h4>
+          <h5 class="price">price</h5>
+          <p class="option">option</p>
+          <p class="option">option</p>
+          <p class="option">option</p>
+          <p class="option">option</p>
+          <button class="btn">join</button>
+        </div>
+        <div class="table">
+          <h4 class="class">class</h4>
+          <h5 class="price">price</h5>
+          <p class="option">option</p>
+          <p class="option">option</p>
+          <p class="option">option</p>
+          <p class="option">option</p>
+          <button class="btn">join</button>
+        </div>
+        <div class="table">
+          <h4 class="class">class</h4>
+          <h5 class="price">price</h5>
+          <p class="option">option</p>
+          <p class="option">option</p>
+          <p class="option">option</p>
+          <p class="option">option</p>
+          <button class="btn">join</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- **반응형 메가 푸터:** 데스크탑 4열, 태블릿 2열, 모바일 1열로 변환되는 사이트 하단 정보 영역 -->
+    <div class="box">
+      <h3 class="title">13. 반응형 메가 푸터</h3>
+      <div class="footer">
+        <img src="" alt="브랜드로고" class="footer-logo" />
+        <div class="menu-group">
+          <h4 class="menu-title">몬테크리스토</h4>
+          <ul class="menus">
+            <li class="menu">사랑이 진실할 때</li>
+            <li class="menu">우린 사랑하니까</li>
+            <li class="menu">축배</li>
+            <li class="menu">언제나 그대 곁에</li>
+            <li class="menu">역사는 승리자의 작품</li>
+            <li class="menu">하루하루 죽어가</li>
+            <li class="menu">우리가 왕이 된다면</li>
+          </ul>
+        </div>
+        <div class="menu-group">
+          <h4 class="menu-title">외쳐 조선</h4>
+          <ul class="menus">
+            <li class="menu">시조의 나라</li>
+            <li class="menu">조선수액</li>
+            <li class="menu">놀아보세</li>
+            <li class="menu">골빈당</li>
+            <li class="menu">비애가</li>
+            <li class="menu">새로운 세상</li>
+          </ul>
+        </div>
+        <div class="menu-group">
+          <h4 class="menu-title">도리안 그레이</h4>
+          <ul class="menus">
+            <li class="menu">아름답게 멈춰버린 나</li>
+            <li class="menu">당신은 누구일까</li>
+            <li class="menu">넌 누구</li>
+            <li class="menu">또 다른 나</li>
+            <li class="menu">악의 꽃</li>
+            <li class="menu">사라진 아름다움</li>
+            <li class="menu">도리안 그레이</li>
+            <li class="menu">레퀴엠</li>
+          </ul>
+        </div>
+        <div class="menu-group">
+          <h4 class="menu-title">데스노트</h4>
+          <ul class="menus">
+            <li class="menu">불쌍한 인간</li>
+            <li class="menu">가능한 일이라면</li>
+            <li class="menu">데스노트</li>
+            <li class="menu">게임의 시작</li>
+            <li class="menu">선을 넘지마</li>
+          </ul>
+        </div>
+        <div class="footer-icons">
+          <img src="" alt="인스타그램" class="footer-icon" />
+          <img src="" alt="블로그" class="footer-icon" />
+          <img src="" alt="트위터" class="footer-icon" />
+          <img src="" alt="링크드인" class="footer-icon" />
+        </div>
+      </div>
+    </div>
+
+    <!-- **이미지 위 텍스트 겹침 (Hero Banner):** `position: absolute`를 사용하지 않고 Grid 셀(Cell) 병합을 통해 이미지 위에 텍스트 박스를 오버랩(겹침) 배치 -->
+    <div class="box">
+      <h3 class="title">14. 이미지 위 텍스트 겹침</h3>
+      <div class="hero-banner">
+        <img src="" alt="배너 이미지" class="banner-img" />
+        <div class="banner-text">
+          <h3>배너 제목 들어갑니더</h3>
+          <p>설명 들어가는 곳</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- **웹앱 셸 (App Shell):** 화면 전체 높이(`100vh`)를 기준으로 좌측 사이드바, 상단 헤더, 메인 콘텐츠 영역의 전체 화면 뼈대 설계 -->
+    <div class="box">
+      <h3 class="title">15. 웹앱 셸</h3>
+      <div class="app-shell">
+        <div class="side-bar">
+          <img src="" alt="logo" class="h-logo" />
+          <div class="menus">
+            <p class="h-menu">home</p>
+            <p class="h-menu">setting</p>
+            <p class="h-menu">calender</p>
+          </div>
+        </div>
+        <div class="header">
+          <h4 class="h-title">이것은 제목입니다</h4>
+          <img src="" alt="알람" class="h-icon" />
+        </div>
+        <div class="main">
+          <h5 class="m-title">여기는 메인 콘텐츠 속 제목입니다</h5>
+          <p class="m-content">
+            여기는 메인 콘텐츠 내용입니다. 이것만 하면 일단 오늘은 잘겁니다 야호
+          </p>
+          <div class="m-img"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

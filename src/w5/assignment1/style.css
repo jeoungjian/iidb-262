@@ -1,0 +1,132 @@
+/* 공통 세팅 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 24px;
+  background-color: #f5f6f8;
+}
+.box {
+  background-color: #fff;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+.title {
+  font-size: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* 재활용 가능한 기본 UI 요소 */
+.btn {
+  padding: 8px 16px;
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* <!-- 1. GNB (글로벌 네비게이션): 좌측 로고, 우측 로그인 버튼 그룹 양끝 정렬 --> */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    background-color: oklch(0.85 0 0);
+    width: 50px;
+    height: 25px;
+  }
+
+  .nav-menus {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+}
+
+/* 2. 검색바 (Search Bar): 가변 너비의 입력창과 고정 너비의 검색 아이콘을 한 줄에 꽉 차게 배치 */
+.search {
+  display: flex;
+  gap: 10px;
+
+  .input {
+    flex-grow: 1;
+    /* '남는 공간 나눠 갖기' : 0 > 공간이 있어도 늘어나지 않고 크기 유지/ 1 > 남는 빈 공간을 자식 요소가 흡수하며 늘어남. 숫자가 더 클수록 많은 공간 차지 */
+  }
+}
+
+/* 3. 미디어/프로필 객체: 좌측 원형 썸네일과 우측 텍스트 정보의 수직 중앙정렬  */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .user-img {
+    background-color: oklch(0.85 0 0);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+}
+
+/* 4.카드 내 액션 버튼 하단 고정: 카드 본문 길이에 관계없이 '자세히 보기' 버튼은 카드 최하단에 항상 위치 */
+.action-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* 5.해시태그 / 필터 칩(Chip): 여러개의 태그가 한 줄로 나열되다 부모 너비를 초과하면 다음 줄로 자동 줄바꿈 */
+.hashtag {
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    .tag {
+      list-style: none;
+      background-color: oklch(0.85 0 0);
+      padding: 10px 20px;
+      border-radius: 999px;
+    }
+  }
+}
+
+/* 6. 동등 비율 탭(Tab) 메뉴: 너비와 상관없이 3개의 탭 메뉴가 1:1:1의 동일 비율로 배분 */
+.taps {
+  display: flex;
+  gap: 10px;
+  .tap {
+    background-color: oklch(0.98 0 0);
+    padding: 15px;
+    border-radius: 15px;
+    flex: 1;
+  }
+}
+
+/* 7. 모바일 하단 툴바: 앱 하단에 4개의 아이콘이 동일한 여백간격을 두고 고르게 배치 */
+.toolbar {
+  .tb-menus {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    .tb-menu {
+      width: 50px;
+      height: 50px;
+      background-color: oklch(0.9 0 0);
+      border-radius: 13px;
+    }
+  }
+}

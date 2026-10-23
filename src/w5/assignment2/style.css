@@ -1,0 +1,298 @@
+/* 공통 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 25px;
+  background-color: oklch(96% 0.001 285);
+}
+.box {
+  background-color: oklch(1 0 0);
+  margin-bottom: 25px;
+  padding: 25px;
+  border-radius: 10px;
+}
+.title {
+  font-size: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* 8. 커머스 상품 리스트 (Auto-fit): 카드의 최소 너비 제한을 두고, 화면 넓이에 따라 열의 개수가 자동으로 반응하는 갤러리 뷰 */
+.product-list-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  .product-box {
+    border: 1px solid oklch(85% 0 0);
+    border-radius: 13px;
+    overflow: hidden;
+    .product-img {
+      width: 100%;
+      height: 150px;
+      background-color: oklch(0.87 0 0);
+      object-fit: cover;
+      display: block;
+    }
+    .product-info {
+      padding: 15px;
+      .product-title {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+    }
+    .product-price {
+      font-size: 14px;
+    }
+  }
+}
+
+/* 9. 대시보드/벤토박스: 다수의 위젯 중 특정 위젯 1개만 가로/세로 2칸(2x2)을 병합하여 차지하는 구조 */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 80px;
+  grid-auto-flow: dense;
+  gap: 16px;
+  .bento-box {
+    background-color: oklch(85% 0 0);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .box1 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+/* 10. 복잡한 결제 폼: 첫 줄 2칸, 둘째 줄 1칸, 셋째 줄 3칸으로 분할된 정교한 회원가입 폼 레이아웃 */
+.signform {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.input input {
+  padding: 13px;
+  border: 1px solid oklch(0.75 0 0);
+  border-radius: 8px;
+}
+.input label {
+  font-size: 12px;
+  font-weight: 500;
+  color: oklch(0.3 0 0);
+}
+.top {
+  grid-column: span 3;
+}
+.middle {
+  grid-column: span 6;
+}
+.bottom {
+  grid-column: span 2;
+}
+
+/* 11. 월간 달력(Calendar): 7개의 열(Column)을 지정하여 자동으로 날짜가 7칸 격자에 맞추어 떨어지는 레이아웃 */
+.calendar_grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  .day {
+    background-color: oklch(0.95 0 0);
+    padding: 8px 12px 30px 12px; /* ? */
+    border-radius: 5px;
+    text-align: start;
+    font-size: 12px;
+    color: oklch(0.3 0 0);
+  }
+}
+
+/* 12. 스펙 비교 표(Pricing Table): `<table>` 태그 없이 Grid를 사용하여 각 행과 열의 크기가 일관되게 정렬된 요금표 */
+.pricing-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 13px;
+  .table {
+    background-color: oklch(0.98 0 0);
+    padding: 50px 15px;
+    border: 1px solid oklch(0.75 0 0);
+    border-radius: 13px;
+    text-align: center;
+    .class {
+      font-size: 18px;
+      font-weight: 400;
+      color: oklch(0.7 0 0);
+    }
+    .price {
+      font-size: 27px;
+      margin-bottom: 15px;
+    }
+    .option {
+      font-size: 14px;
+      color: oklch(0.7 0 0);
+    }
+    .btn {
+      padding: 10px;
+      border: 1px solid oklch(0.8 0 0);
+      border-radius: 4px;
+      margin-top: 23px;
+      width: 80%;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+  }
+}
+
+/* 13.반응형 메가 푸터: 데스크탑 4열, 태블릿 2열, 모바일 1열로 변환되는 사이트 하단 정보 영역 */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  padding: 40px 20px;
+  background-color: oklch(0.95 0 0);
+  border-radius: 13px;
+  align-items: start;
+  .footer-logo {
+    max-width: 150px;
+    background-color: oklch(0.7 0 0);
+    padding: 20px;
+    border-radius: 4px;
+  }
+  .menu-group {
+    .menu-title {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .menus {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      .menu {
+        font-size: 14px;
+        color: oklch(0.5 0 0);
+        margin-bottom: 6px;
+      }
+    }
+  }
+  .footer-icons {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    .footer-icon {
+      background-color: oklch(0.7 0 0);
+      padding: 15px;
+      border-radius: 4px;
+    }
+  }
+}
+
+/* 14.이미지 위 텍스트 겹침(Hero Banner): `position: absolute`를 사용하지 않고 Grid 셀(Cell) 병합을 통해 이미지 위에 텍스트 박스를 오버랩(겹침) 배치 */
+.hero-banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  .banner-img {
+    background-color: oklch(0.95 0 0);
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .banner-text {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    text-align: center;
+    margin-block: 70px;
+  }
+}
+/* 15. 웹앱 셸(App Shell): 화면 전체 높이(`100vh`)를 기준으로 좌측 사이드바, 상단 헤더, 메인 콘텐츠 영역의 전체 화면 뼈대 설계 */
+.app-shell {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto 1fr;
+  background-color: oklch(0.95 0 0);
+  border-radius: 13px;
+  overflow: hidden;
+  .side-bar {
+    grid-row: 1/-1;
+    padding: 20px 20px;
+    background-color: oklch(0.9 0 0);
+    font-weight: 700;
+    .h-logo {
+      background-color: oklch(0.8 0 0);
+      padding: 15px 45px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+    .menus {
+      padding: 0px 20px;
+    }
+    .h-menu {
+      background-color: oklch(0.87 0 0);
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: oklch(0.4 0 0);
+    }
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 2;
+    padding: 30px 30px;
+    background-color: oklch(0.25 0 0);
+    .h-title {
+      font-size: 20px;
+      color: oklch(1 0 0);
+    }
+    .h-icon {
+      background-color: oklch(0.87 0 0);
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+    }
+  }
+
+  .main {
+    padding: 20px;
+    overflow: auto;
+    .m-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .m-content {
+      font-size: 14px;
+      color: oklch(0.6 0 0);
+      margin-top: 10px;
+    }
+    .m-img {
+      background-color: oklch(0.87 0 0);
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+  }
+}
