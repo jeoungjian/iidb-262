@@ -269,6 +269,7 @@ body {
   }
   .title-black {
     font-size: 60px;
+    bottom: -1px;
   }
   .title-yellow {
     font-size: 60px;
